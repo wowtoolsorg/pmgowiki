@@ -95,9 +95,14 @@ public class HttpHelper {
 	 * @throws IOException 
 	 * @throws URISyntaxException 
 	 * @throws HttpException **/
-	public String doGet(String strUrl) throws ClientProtocolException, IOException, URISyntaxException{
+	public String doGet(String strUrl,String[][] header) throws ClientProtocolException, IOException, URISyntaxException{
 		String res = null;
 		HttpGet httpGet = new HttpGet(strUrl);
+		if(null!=header){
+			for(String[] s:header){
+				httpGet.setHeader(s[0],s[1]);
+			}
+		}
 //		HttpHost proxyHost = new HttpHost("192.168.35.26", 808);//代理
 //		httpGet.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxyHost);//设置代理
         HttpResponse response1 = client.execute(httpGet);
@@ -128,13 +133,18 @@ public class HttpHelper {
 	/**使用post方式访问url,
 	 * @param 
 	 * params 输入的参数params必须为二维数组params[n][2]。params[n][0]为参数名，params[n][1]为参数值 **/
-	public String doPost(String url,String[][] params) throws IOException{
+	public String doPost(String url,String[][] params,String[][] header) throws IOException{
 		String res = null;
 		if(params[0].length!=2){
 			System.out.println("输入的post参数格式不对");
 			return null;
 		}
 		HttpPost httpPost = new HttpPost(url);
+		if(null!=header){
+			for(String[] s:header){
+				httpPost.setHeader(s[0],s[1]);
+			}
+		}
 //		HttpHost proxyHost = new HttpHost("192.168.35.26", 808);//代理
 //		httpPost.getParams().setParameter(ConnRoutePNames.DEFAULT_PROXY, proxyHost);//设置代理
         List <NameValuePair> nvps = new ArrayList <NameValuePair>();
@@ -144,7 +154,6 @@ public class HttpHelper {
         
         httpPost.setEntity(new UrlEncodedFormEntity(nvps));
         HttpResponse response2 = client.execute(httpPost);
-
         try {
         	HttpEntity httpEntity = response2.getEntity();
             if(httpEntity != null){
@@ -201,7 +210,7 @@ public class HttpHelper {
      * @throws ParseException
      * @throws IOException
      */
-    private String readHtmlContentFromEntity(HttpEntity httpEntity) throws ParseException, IOException {
+    public static String readHtmlContentFromEntity(HttpEntity httpEntity) throws ParseException, IOException {
         String html = "";
         Header header = httpEntity.getContentEncoding();
         if(httpEntity.getContentLength() < 2147483647L){            //EntityUtils无法处理ContentLength超过2147483647L的Entity
@@ -230,7 +239,7 @@ public class HttpHelper {
      * @return 页面内容的String格式
      * @throws IOException
      */
-    private String unZip(InputStream in, String charSet) throws IOException {
+    private static String unZip(InputStream in, String charSet) throws IOException {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         GZIPInputStream gis = null;
         try {
@@ -257,7 +266,7 @@ public class HttpHelper {
      * @return 从流中读取的String
      * @throws IOException
      */
-    private String readInStreamToString(InputStream in, String charSet) throws IOException {
+    private static String readInStreamToString(InputStream in, String charSet) throws IOException {
         StringBuilder str = new StringBuilder();
         String line;
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(in, charSet));
