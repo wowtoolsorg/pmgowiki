@@ -9,9 +9,9 @@ import java.io.FileOutputStream;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.wowtools.pmgowiki.probuf.PmgoProbuf;
-import org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop;
-import org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.Builder;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Builder;
 
 public class PmgoProbufTest {
 
