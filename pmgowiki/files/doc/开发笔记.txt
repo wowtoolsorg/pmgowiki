@@ -1,0 +1,5 @@
+参考自https://github.com/AHAAAAAAA/PokemonGo-Map
+
+1、构建protobuf java类
+https://github.com/google/protobuf/releases下载protoc-2.6.1-win32.zip并解压
+cmd运行命令protoc.exe --java_out=./ ./pokemon_java.proto 生成java类
