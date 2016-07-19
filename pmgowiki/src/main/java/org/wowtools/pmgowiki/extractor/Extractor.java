@@ -19,6 +19,9 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Builder;
 import org.wowtools.pmgowiki.util.HttpHelper;
 
 /**
@@ -120,10 +123,57 @@ public class Extractor {
 			throw new Exception("登录失败,step3:",e);
 		}
 	}
+	/**
+	def get_profile(access_token, api, useauth, *reqq):
+	    req = pokemon_pb2.RequestEnvelop()
+	    req1 = req.requests.add()
+	    req1.type = 2
+	    if len(reqq) >= 1:
+	        req1.MergeFrom(reqq[0])
+
+	    req2 = req.requests.add()
+	    req2.type = 126
+	    if len(reqq) >= 2:
+	        req2.MergeFrom(reqq[1])
+
+	    req3 = req.requests.add()
+	    req3.type = 4
+	    if len(reqq) >= 3:
+	        req3.MergeFrom(reqq[2])
+
+	    req4 = req.requests.add()
+	    req4.type = 129
+	    if len(reqq) >= 4:
+	        req4.MergeFrom(reqq[3])
+
+	    req5 = req.requests.add()
+	    req5.type = 5
+	    if len(reqq) >= 5:
+	        req5.MergeFrom(reqq[4])
+	    return retrying_api_req(api, access_token, req, useauth=useauth)
+	 */
+	
+	public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Builder getProfile(String accessToken,String api,String r){
+		return null;
+	} 
+	
+	public String getApiEndpoint(String accessToken,String api){
+		if(null==api || api.length()==0){
+			api = API_URL;
+		}
+		org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Builder 	profileResponse = null;
+		while(profileResponse==null || profileResponse.hasApiUrl()){
+			 log("get_api_endpoint: calling get_profile");
+			 profileResponse = getProfile(accessToken,api,null);
+		}
+		return "https://"+profileResponse.getApiUrl()+"/rpc";
+	}
+
 	
 	public static void main(String[] args) throws Exception {
-		String r = new Extractor().loginWithPTC("test1234820142", "test1234820142");
-		System.out.println(r);
+		Extractor extractor = new Extractor();
+		String accessToken = extractor.loginWithPTC("test1234820142", "test1234820142");
+		System.out.println("login success "+accessToken);
 	}
 	
 	private void log(String log){
