@@ -13,11 +13,11 @@ public final class PmgoProbuf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     boolean hasUnknown1();
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     int getUnknown1();
 
@@ -279,11 +279,11 @@ public final class PmgoProbuf {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required int32 type = 1;</code>
+       * <code>optional int32 type = 1;</code>
        */
       boolean hasType();
       /**
-       * <code>required int32 type = 1;</code>
+       * <code>optional int32 type = 1;</code>
        */
       int getType();
 
@@ -413,13 +413,13 @@ public final class PmgoProbuf {
       public static final int TYPE_FIELD_NUMBER = 1;
       private int type_;
       /**
-       * <code>required int32 type = 1;</code>
+       * <code>optional int32 type = 1;</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 type = 1;</code>
+       * <code>optional int32 type = 1;</code>
        */
       public int getType() {
         return type_;
@@ -456,16 +456,6 @@ public final class PmgoProbuf {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasType()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (hasMessage()) {
-          if (!getMessage().isInitialized()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
-        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -593,7 +583,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.Requests.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -689,16 +679,6 @@ public final class PmgoProbuf {
         }
 
         public final boolean isInitialized() {
-          if (!hasType()) {
-            
-            return false;
-          }
-          if (hasMessage()) {
-            if (!getMessage().isInitialized()) {
-              
-              return false;
-            }
-          }
           return true;
         }
 
@@ -723,19 +703,19 @@ public final class PmgoProbuf {
 
         private int type_ ;
         /**
-         * <code>required int32 type = 1;</code>
+         * <code>optional int32 type = 1;</code>
          */
         public boolean hasType() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required int32 type = 1;</code>
+         * <code>optional int32 type = 1;</code>
          */
         public int getType() {
           return type_;
         }
         /**
-         * <code>required int32 type = 1;</code>
+         * <code>optional int32 type = 1;</code>
          */
         public Builder setType(int value) {
           bitField0_ |= 0x00000001;
@@ -744,7 +724,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required int32 type = 1;</code>
+         * <code>optional int32 type = 1;</code>
          */
         public Builder clearType() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -885,15 +865,15 @@ public final class PmgoProbuf {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required string unknown4 = 1;</code>
+       * <code>optional string unknown4 = 1;</code>
        */
       boolean hasUnknown4();
       /**
-       * <code>required string unknown4 = 1;</code>
+       * <code>optional string unknown4 = 1;</code>
        */
       java.lang.String getUnknown4();
       /**
-       * <code>required string unknown4 = 1;</code>
+       * <code>optional string unknown4 = 1;</code>
        */
       com.google.protobuf.ByteString
           getUnknown4Bytes();
@@ -999,13 +979,13 @@ public final class PmgoProbuf {
       public static final int UNKNOWN4_FIELD_NUMBER = 1;
       private java.lang.Object unknown4_;
       /**
-       * <code>required string unknown4 = 1;</code>
+       * <code>optional string unknown4 = 1;</code>
        */
       public boolean hasUnknown4() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string unknown4 = 1;</code>
+       * <code>optional string unknown4 = 1;</code>
        */
       public java.lang.String getUnknown4() {
         java.lang.Object ref = unknown4_;
@@ -1022,7 +1002,7 @@ public final class PmgoProbuf {
         }
       }
       /**
-       * <code>required string unknown4 = 1;</code>
+       * <code>optional string unknown4 = 1;</code>
        */
       public com.google.protobuf.ByteString
           getUnknown4Bytes() {
@@ -1047,10 +1027,6 @@ public final class PmgoProbuf {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasUnknown4()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -1171,7 +1147,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown3.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown3.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.Unknown3.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown3.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -1251,10 +1227,6 @@ public final class PmgoProbuf {
         }
 
         public final boolean isInitialized() {
-          if (!hasUnknown4()) {
-            
-            return false;
-          }
           return true;
         }
 
@@ -1279,13 +1251,13 @@ public final class PmgoProbuf {
 
         private java.lang.Object unknown4_ = "";
         /**
-         * <code>required string unknown4 = 1;</code>
+         * <code>optional string unknown4 = 1;</code>
          */
         public boolean hasUnknown4() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required string unknown4 = 1;</code>
+         * <code>optional string unknown4 = 1;</code>
          */
         public java.lang.String getUnknown4() {
           java.lang.Object ref = unknown4_;
@@ -1302,7 +1274,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required string unknown4 = 1;</code>
+         * <code>optional string unknown4 = 1;</code>
          */
         public com.google.protobuf.ByteString
             getUnknown4Bytes() {
@@ -1318,7 +1290,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required string unknown4 = 1;</code>
+         * <code>optional string unknown4 = 1;</code>
          */
         public Builder setUnknown4(
             java.lang.String value) {
@@ -1331,7 +1303,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required string unknown4 = 1;</code>
+         * <code>optional string unknown4 = 1;</code>
          */
         public Builder clearUnknown4() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -1340,7 +1312,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required string unknown4 = 1;</code>
+         * <code>optional string unknown4 = 1;</code>
          */
         public Builder setUnknown4Bytes(
             com.google.protobuf.ByteString value) {
@@ -1369,24 +1341,24 @@ public final class PmgoProbuf {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       boolean hasUnknown1();
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       int getUnknown1();
 
       /**
-       * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       boolean hasUnknown2();
       /**
-       * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2 getUnknown2();
       /**
-       * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2OrBuilder getUnknown2OrBuilder();
     }
@@ -1504,11 +1476,11 @@ public final class PmgoProbuf {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         boolean hasUnknown1();
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         com.google.protobuf.ByteString getUnknown1();
       }
@@ -1612,13 +1584,13 @@ public final class PmgoProbuf {
         public static final int UNKNOWN1_FIELD_NUMBER = 1;
         private com.google.protobuf.ByteString unknown1_;
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         public boolean hasUnknown1() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         public com.google.protobuf.ByteString getUnknown1() {
           return unknown1_;
@@ -1633,10 +1605,6 @@ public final class PmgoProbuf {
           if (isInitialized == 1) return true;
           if (isInitialized == 0) return false;
 
-          if (!hasUnknown1()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
           memoizedIsInitialized = 1;
           return true;
         }
@@ -1757,7 +1725,7 @@ public final class PmgoProbuf {
                     org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.Builder.class);
           }
 
-          // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.newBuilder()
+          // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -1835,10 +1803,6 @@ public final class PmgoProbuf {
           }
 
           public final boolean isInitialized() {
-            if (!hasUnknown1()) {
-              
-              return false;
-            }
             return true;
           }
 
@@ -1863,19 +1827,19 @@ public final class PmgoProbuf {
 
           private com.google.protobuf.ByteString unknown1_ = com.google.protobuf.ByteString.EMPTY;
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public boolean hasUnknown1() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public com.google.protobuf.ByteString getUnknown1() {
             return unknown1_;
           }
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public Builder setUnknown1(com.google.protobuf.ByteString value) {
             if (value == null) {
@@ -1887,7 +1851,7 @@ public final class PmgoProbuf {
             return this;
           }
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public Builder clearUnknown1() {
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -1911,13 +1875,13 @@ public final class PmgoProbuf {
       public static final int UNKNOWN1_FIELD_NUMBER = 1;
       private int unknown1_;
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public boolean hasUnknown1() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public int getUnknown1() {
         return unknown1_;
@@ -1926,19 +1890,19 @@ public final class PmgoProbuf {
       public static final int UNKNOWN2_FIELD_NUMBER = 2;
       private org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2 unknown2_;
       /**
-       * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       public boolean hasUnknown2() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2 getUnknown2() {
         return unknown2_;
       }
       /**
-       * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2OrBuilder getUnknown2OrBuilder() {
         return unknown2_;
@@ -1954,18 +1918,6 @@ public final class PmgoProbuf {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasUnknown1()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasUnknown2()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!getUnknown2().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -2093,7 +2045,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.Unknown6.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -2189,18 +2141,6 @@ public final class PmgoProbuf {
         }
 
         public final boolean isInitialized() {
-          if (!hasUnknown1()) {
-            
-            return false;
-          }
-          if (!hasUnknown2()) {
-            
-            return false;
-          }
-          if (!getUnknown2().isInitialized()) {
-            
-            return false;
-          }
           return true;
         }
 
@@ -2225,19 +2165,19 @@ public final class PmgoProbuf {
 
         private int unknown1_ ;
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public boolean hasUnknown1() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public int getUnknown1() {
           return unknown1_;
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public Builder setUnknown1(int value) {
           bitField0_ |= 0x00000001;
@@ -2246,7 +2186,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public Builder clearUnknown1() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -2259,13 +2199,13 @@ public final class PmgoProbuf {
         private com.google.protobuf.SingleFieldBuilder<
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.Builder, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2OrBuilder> unknown2Builder_;
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public boolean hasUnknown2() {
           return ((bitField0_ & 0x00000002) == 0x00000002);
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2 getUnknown2() {
           if (unknown2Builder_ == null) {
@@ -2275,7 +2215,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder setUnknown2(org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2 value) {
           if (unknown2Builder_ == null) {
@@ -2291,7 +2231,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder setUnknown2(
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.Builder builderForValue) {
@@ -2305,7 +2245,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder mergeUnknown2(org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2 value) {
           if (unknown2Builder_ == null) {
@@ -2324,7 +2264,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder clearUnknown2() {
           if (unknown2Builder_ == null) {
@@ -2337,7 +2277,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.Builder getUnknown2Builder() {
           bitField0_ |= 0x00000002;
@@ -2345,7 +2285,7 @@ public final class PmgoProbuf {
           return getUnknown2FieldBuilder().getBuilder();
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2OrBuilder getUnknown2OrBuilder() {
           if (unknown2Builder_ != null) {
@@ -2355,7 +2295,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2.Builder, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Unknown6.Unknown2OrBuilder> 
@@ -2387,29 +2327,29 @@ public final class PmgoProbuf {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required string provider = 1;</code>
+       * <code>optional string provider = 1;</code>
        */
       boolean hasProvider();
       /**
-       * <code>required string provider = 1;</code>
+       * <code>optional string provider = 1;</code>
        */
       java.lang.String getProvider();
       /**
-       * <code>required string provider = 1;</code>
+       * <code>optional string provider = 1;</code>
        */
       com.google.protobuf.ByteString
           getProviderBytes();
 
       /**
-       * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
        */
       boolean hasToken();
       /**
-       * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
        */
       org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT getToken();
       /**
-       * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
        */
       org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWTOrBuilder getTokenOrBuilder();
     }
@@ -2528,25 +2468,25 @@ public final class PmgoProbuf {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>required string contents = 1;</code>
+         * <code>optional string contents = 1;</code>
          */
         boolean hasContents();
         /**
-         * <code>required string contents = 1;</code>
+         * <code>optional string contents = 1;</code>
          */
         java.lang.String getContents();
         /**
-         * <code>required string contents = 1;</code>
+         * <code>optional string contents = 1;</code>
          */
         com.google.protobuf.ByteString
             getContentsBytes();
 
         /**
-         * <code>required int32 unknown13 = 2;</code>
+         * <code>optional int32 unknown13 = 2;</code>
          */
         boolean hasUnknown13();
         /**
-         * <code>required int32 unknown13 = 2;</code>
+         * <code>optional int32 unknown13 = 2;</code>
          */
         int getUnknown13();
       }
@@ -2656,13 +2596,13 @@ public final class PmgoProbuf {
         public static final int CONTENTS_FIELD_NUMBER = 1;
         private java.lang.Object contents_;
         /**
-         * <code>required string contents = 1;</code>
+         * <code>optional string contents = 1;</code>
          */
         public boolean hasContents() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required string contents = 1;</code>
+         * <code>optional string contents = 1;</code>
          */
         public java.lang.String getContents() {
           java.lang.Object ref = contents_;
@@ -2679,7 +2619,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required string contents = 1;</code>
+         * <code>optional string contents = 1;</code>
          */
         public com.google.protobuf.ByteString
             getContentsBytes() {
@@ -2698,13 +2638,13 @@ public final class PmgoProbuf {
         public static final int UNKNOWN13_FIELD_NUMBER = 2;
         private int unknown13_;
         /**
-         * <code>required int32 unknown13 = 2;</code>
+         * <code>optional int32 unknown13 = 2;</code>
          */
         public boolean hasUnknown13() {
           return ((bitField0_ & 0x00000002) == 0x00000002);
         }
         /**
-         * <code>required int32 unknown13 = 2;</code>
+         * <code>optional int32 unknown13 = 2;</code>
          */
         public int getUnknown13() {
           return unknown13_;
@@ -2720,14 +2660,6 @@ public final class PmgoProbuf {
           if (isInitialized == 1) return true;
           if (isInitialized == 0) return false;
 
-          if (!hasContents()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
-          if (!hasUnknown13()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
           memoizedIsInitialized = 1;
           return true;
         }
@@ -2855,7 +2787,7 @@ public final class PmgoProbuf {
                     org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.Builder.class);
           }
 
-          // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.newBuilder()
+          // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -2944,14 +2876,6 @@ public final class PmgoProbuf {
           }
 
           public final boolean isInitialized() {
-            if (!hasContents()) {
-              
-              return false;
-            }
-            if (!hasUnknown13()) {
-              
-              return false;
-            }
             return true;
           }
 
@@ -2976,13 +2900,13 @@ public final class PmgoProbuf {
 
           private java.lang.Object contents_ = "";
           /**
-           * <code>required string contents = 1;</code>
+           * <code>optional string contents = 1;</code>
            */
           public boolean hasContents() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>required string contents = 1;</code>
+           * <code>optional string contents = 1;</code>
            */
           public java.lang.String getContents() {
             java.lang.Object ref = contents_;
@@ -2999,7 +2923,7 @@ public final class PmgoProbuf {
             }
           }
           /**
-           * <code>required string contents = 1;</code>
+           * <code>optional string contents = 1;</code>
            */
           public com.google.protobuf.ByteString
               getContentsBytes() {
@@ -3015,7 +2939,7 @@ public final class PmgoProbuf {
             }
           }
           /**
-           * <code>required string contents = 1;</code>
+           * <code>optional string contents = 1;</code>
            */
           public Builder setContents(
               java.lang.String value) {
@@ -3028,7 +2952,7 @@ public final class PmgoProbuf {
             return this;
           }
           /**
-           * <code>required string contents = 1;</code>
+           * <code>optional string contents = 1;</code>
            */
           public Builder clearContents() {
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -3037,7 +2961,7 @@ public final class PmgoProbuf {
             return this;
           }
           /**
-           * <code>required string contents = 1;</code>
+           * <code>optional string contents = 1;</code>
            */
           public Builder setContentsBytes(
               com.google.protobuf.ByteString value) {
@@ -3052,19 +2976,19 @@ public final class PmgoProbuf {
 
           private int unknown13_ ;
           /**
-           * <code>required int32 unknown13 = 2;</code>
+           * <code>optional int32 unknown13 = 2;</code>
            */
           public boolean hasUnknown13() {
             return ((bitField0_ & 0x00000002) == 0x00000002);
           }
           /**
-           * <code>required int32 unknown13 = 2;</code>
+           * <code>optional int32 unknown13 = 2;</code>
            */
           public int getUnknown13() {
             return unknown13_;
           }
           /**
-           * <code>required int32 unknown13 = 2;</code>
+           * <code>optional int32 unknown13 = 2;</code>
            */
           public Builder setUnknown13(int value) {
             bitField0_ |= 0x00000002;
@@ -3073,7 +2997,7 @@ public final class PmgoProbuf {
             return this;
           }
           /**
-           * <code>required int32 unknown13 = 2;</code>
+           * <code>optional int32 unknown13 = 2;</code>
            */
           public Builder clearUnknown13() {
             bitField0_ = (bitField0_ & ~0x00000002);
@@ -3097,13 +3021,13 @@ public final class PmgoProbuf {
       public static final int PROVIDER_FIELD_NUMBER = 1;
       private java.lang.Object provider_;
       /**
-       * <code>required string provider = 1;</code>
+       * <code>optional string provider = 1;</code>
        */
       public boolean hasProvider() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required string provider = 1;</code>
+       * <code>optional string provider = 1;</code>
        */
       public java.lang.String getProvider() {
         java.lang.Object ref = provider_;
@@ -3120,7 +3044,7 @@ public final class PmgoProbuf {
         }
       }
       /**
-       * <code>required string provider = 1;</code>
+       * <code>optional string provider = 1;</code>
        */
       public com.google.protobuf.ByteString
           getProviderBytes() {
@@ -3139,19 +3063,19 @@ public final class PmgoProbuf {
       public static final int TOKEN_FIELD_NUMBER = 2;
       private org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT token_;
       /**
-       * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
        */
       public boolean hasToken() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
        */
       public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT getToken() {
         return token_;
       }
       /**
-       * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+       * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
        */
       public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWTOrBuilder getTokenOrBuilder() {
         return token_;
@@ -3167,18 +3091,6 @@ public final class PmgoProbuf {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasProvider()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasToken()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!getToken().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -3306,7 +3218,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -3404,18 +3316,6 @@ public final class PmgoProbuf {
         }
 
         public final boolean isInitialized() {
-          if (!hasProvider()) {
-            
-            return false;
-          }
-          if (!hasToken()) {
-            
-            return false;
-          }
-          if (!getToken().isInitialized()) {
-            
-            return false;
-          }
           return true;
         }
 
@@ -3440,13 +3340,13 @@ public final class PmgoProbuf {
 
         private java.lang.Object provider_ = "";
         /**
-         * <code>required string provider = 1;</code>
+         * <code>optional string provider = 1;</code>
          */
         public boolean hasProvider() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required string provider = 1;</code>
+         * <code>optional string provider = 1;</code>
          */
         public java.lang.String getProvider() {
           java.lang.Object ref = provider_;
@@ -3463,7 +3363,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required string provider = 1;</code>
+         * <code>optional string provider = 1;</code>
          */
         public com.google.protobuf.ByteString
             getProviderBytes() {
@@ -3479,7 +3379,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required string provider = 1;</code>
+         * <code>optional string provider = 1;</code>
          */
         public Builder setProvider(
             java.lang.String value) {
@@ -3492,7 +3392,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required string provider = 1;</code>
+         * <code>optional string provider = 1;</code>
          */
         public Builder clearProvider() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -3501,7 +3401,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required string provider = 1;</code>
+         * <code>optional string provider = 1;</code>
          */
         public Builder setProviderBytes(
             com.google.protobuf.ByteString value) {
@@ -3518,13 +3418,13 @@ public final class PmgoProbuf {
         private com.google.protobuf.SingleFieldBuilder<
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.Builder, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWTOrBuilder> tokenBuilder_;
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public boolean hasToken() {
           return ((bitField0_ & 0x00000002) == 0x00000002);
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT getToken() {
           if (tokenBuilder_ == null) {
@@ -3534,7 +3434,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public Builder setToken(org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT value) {
           if (tokenBuilder_ == null) {
@@ -3550,7 +3450,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public Builder setToken(
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.Builder builderForValue) {
@@ -3564,7 +3464,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public Builder mergeToken(org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT value) {
           if (tokenBuilder_ == null) {
@@ -3583,7 +3483,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public Builder clearToken() {
           if (tokenBuilder_ == null) {
@@ -3596,7 +3496,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.Builder getTokenBuilder() {
           bitField0_ |= 0x00000002;
@@ -3604,7 +3504,7 @@ public final class PmgoProbuf {
           return getTokenFieldBuilder().getBuilder();
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWTOrBuilder getTokenOrBuilder() {
           if (tokenBuilder_ != null) {
@@ -3614,7 +3514,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
+         * <code>optional .pojo.RequestEnvelop.AuthInfo.JWT token = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWT.Builder, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.JWTOrBuilder> 
@@ -3645,13 +3545,13 @@ public final class PmgoProbuf {
     public static final int UNKNOWN1_FIELD_NUMBER = 1;
     private int unknown1_;
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     public boolean hasUnknown1() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     public int getUnknown1() {
       return unknown1_;
@@ -3826,28 +3726,6 @@ public final class PmgoProbuf {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasUnknown1()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      for (int i = 0; i < getRequestsCount(); i++) {
-        if (!getRequests(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasUnknown6()) {
-        if (!getUnknown6().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      if (hasAuth()) {
-        if (!getAuth().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -4024,7 +3902,7 @@ public final class PmgoProbuf {
                 org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Builder.class);
       }
 
-      // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.RequestEnvelop.newBuilder()
+      // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -4225,28 +4103,6 @@ public final class PmgoProbuf {
       }
 
       public final boolean isInitialized() {
-        if (!hasUnknown1()) {
-          
-          return false;
-        }
-        for (int i = 0; i < getRequestsCount(); i++) {
-          if (!getRequests(i).isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasUnknown6()) {
-          if (!getUnknown6().isInitialized()) {
-            
-            return false;
-          }
-        }
-        if (hasAuth()) {
-          if (!getAuth().isInitialized()) {
-            
-            return false;
-          }
-        }
         return true;
       }
 
@@ -4271,19 +4127,19 @@ public final class PmgoProbuf {
 
       private int unknown1_ ;
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public boolean hasUnknown1() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public int getUnknown1() {
         return unknown1_;
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public Builder setUnknown1(int value) {
         bitField0_ |= 0x00000001;
@@ -4292,7 +4148,7 @@ public final class PmgoProbuf {
         return this;
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public Builder clearUnknown1() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -4949,11 +4805,11 @@ public final class PmgoProbuf {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     boolean hasUnknown1();
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     int getUnknown1();
 
@@ -5179,24 +5035,24 @@ public final class PmgoProbuf {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       boolean hasUnknown1();
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       int getUnknown1();
 
       /**
-       * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       boolean hasUnknown2();
       /**
-       * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2 getUnknown2();
       /**
-       * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2OrBuilder getUnknown2OrBuilder();
     }
@@ -5314,11 +5170,11 @@ public final class PmgoProbuf {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         boolean hasUnknown1();
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         com.google.protobuf.ByteString getUnknown1();
       }
@@ -5422,13 +5278,13 @@ public final class PmgoProbuf {
         public static final int UNKNOWN1_FIELD_NUMBER = 1;
         private com.google.protobuf.ByteString unknown1_;
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         public boolean hasUnknown1() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required bytes unknown1 = 1;</code>
+         * <code>optional bytes unknown1 = 1;</code>
          */
         public com.google.protobuf.ByteString getUnknown1() {
           return unknown1_;
@@ -5443,10 +5299,6 @@ public final class PmgoProbuf {
           if (isInitialized == 1) return true;
           if (isInitialized == 0) return false;
 
-          if (!hasUnknown1()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
           memoizedIsInitialized = 1;
           return true;
         }
@@ -5567,7 +5419,7 @@ public final class PmgoProbuf {
                     org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.Builder.class);
           }
 
-          // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.newBuilder()
+          // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -5645,10 +5497,6 @@ public final class PmgoProbuf {
           }
 
           public final boolean isInitialized() {
-            if (!hasUnknown1()) {
-              
-              return false;
-            }
             return true;
           }
 
@@ -5673,19 +5521,19 @@ public final class PmgoProbuf {
 
           private com.google.protobuf.ByteString unknown1_ = com.google.protobuf.ByteString.EMPTY;
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public boolean hasUnknown1() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public com.google.protobuf.ByteString getUnknown1() {
             return unknown1_;
           }
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public Builder setUnknown1(com.google.protobuf.ByteString value) {
             if (value == null) {
@@ -5697,7 +5545,7 @@ public final class PmgoProbuf {
             return this;
           }
           /**
-           * <code>required bytes unknown1 = 1;</code>
+           * <code>optional bytes unknown1 = 1;</code>
            */
           public Builder clearUnknown1() {
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -5721,13 +5569,13 @@ public final class PmgoProbuf {
       public static final int UNKNOWN1_FIELD_NUMBER = 1;
       private int unknown1_;
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public boolean hasUnknown1() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public int getUnknown1() {
         return unknown1_;
@@ -5736,19 +5584,19 @@ public final class PmgoProbuf {
       public static final int UNKNOWN2_FIELD_NUMBER = 2;
       private org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2 unknown2_;
       /**
-       * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       public boolean hasUnknown2() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2 getUnknown2() {
         return unknown2_;
       }
       /**
-       * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+       * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
        */
       public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2OrBuilder getUnknown2OrBuilder() {
         return unknown2_;
@@ -5764,18 +5612,6 @@ public final class PmgoProbuf {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasUnknown1()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!hasUnknown2()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (!getUnknown2().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -5903,7 +5739,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -5999,18 +5835,6 @@ public final class PmgoProbuf {
         }
 
         public final boolean isInitialized() {
-          if (!hasUnknown1()) {
-            
-            return false;
-          }
-          if (!hasUnknown2()) {
-            
-            return false;
-          }
-          if (!getUnknown2().isInitialized()) {
-            
-            return false;
-          }
           return true;
         }
 
@@ -6035,19 +5859,19 @@ public final class PmgoProbuf {
 
         private int unknown1_ ;
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public boolean hasUnknown1() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public int getUnknown1() {
           return unknown1_;
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public Builder setUnknown1(int value) {
           bitField0_ |= 0x00000001;
@@ -6056,7 +5880,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public Builder clearUnknown1() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -6069,13 +5893,13 @@ public final class PmgoProbuf {
         private com.google.protobuf.SingleFieldBuilder<
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.Builder, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2OrBuilder> unknown2Builder_;
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public boolean hasUnknown2() {
           return ((bitField0_ & 0x00000002) == 0x00000002);
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2 getUnknown2() {
           if (unknown2Builder_ == null) {
@@ -6085,7 +5909,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder setUnknown2(org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2 value) {
           if (unknown2Builder_ == null) {
@@ -6101,7 +5925,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder setUnknown2(
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.Builder builderForValue) {
@@ -6115,7 +5939,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder mergeUnknown2(org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2 value) {
           if (unknown2Builder_ == null) {
@@ -6134,7 +5958,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public Builder clearUnknown2() {
           if (unknown2Builder_ == null) {
@@ -6147,7 +5971,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.Builder getUnknown2Builder() {
           bitField0_ |= 0x00000002;
@@ -6155,7 +5979,7 @@ public final class PmgoProbuf {
           return getUnknown2FieldBuilder().getBuilder();
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2OrBuilder getUnknown2OrBuilder() {
           if (unknown2Builder_ != null) {
@@ -6165,7 +5989,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
+         * <code>optional .pojo.ResponseEnvelop.Unknown6.Unknown2 unknown2 = 2;</code>
          */
         private com.google.protobuf.SingleFieldBuilder<
             org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2.Builder, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown6.Unknown2OrBuilder> 
@@ -6520,7 +6344,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown7.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown7.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Unknown7.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown7.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -6756,11 +6580,11 @@ public final class PmgoProbuf {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       boolean hasUnknown1();
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       int getUnknown1();
 
@@ -6890,13 +6714,13 @@ public final class PmgoProbuf {
       public static final int UNKNOWN1_FIELD_NUMBER = 1;
       private int unknown1_;
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public boolean hasUnknown1() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public int getUnknown1() {
         return unknown1_;
@@ -6933,16 +6757,6 @@ public final class PmgoProbuf {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasUnknown1()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        if (hasProfile()) {
-          if (!getProfile().isInitialized()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
-        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -7070,7 +6884,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Payload.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Payload.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Payload.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Payload.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -7166,16 +6980,6 @@ public final class PmgoProbuf {
         }
 
         public final boolean isInitialized() {
-          if (!hasUnknown1()) {
-            
-            return false;
-          }
-          if (hasProfile()) {
-            if (!getProfile().isInitialized()) {
-              
-              return false;
-            }
-          }
           return true;
         }
 
@@ -7200,19 +7004,19 @@ public final class PmgoProbuf {
 
         private int unknown1_ ;
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public boolean hasUnknown1() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public int getUnknown1() {
           return unknown1_;
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public Builder setUnknown1(int value) {
           bitField0_ |= 0x00000001;
@@ -7221,7 +7025,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required int32 unknown1 = 1;</code>
+         * <code>optional int32 unknown1 = 1;</code>
          */
         public Builder clearUnknown1() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -7362,11 +7166,11 @@ public final class PmgoProbuf {
         com.google.protobuf.MessageOrBuilder {
 
       /**
-       * <code>required int64 creation_time = 1;</code>
+       * <code>optional int64 creation_time = 1;</code>
        */
       boolean hasCreationTime();
       /**
-       * <code>required int64 creation_time = 1;</code>
+       * <code>optional int64 creation_time = 1;</code>
        */
       long getCreationTime();
 
@@ -8022,7 +7826,7 @@ public final class PmgoProbuf {
                     org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.AvatarDetails.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.AvatarDetails.Builder.class);
           }
 
-          // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Profile.AvatarDetails.newBuilder()
+          // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.AvatarDetails.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -8579,7 +8383,7 @@ public final class PmgoProbuf {
                     org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.DailyBonus.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.DailyBonus.Builder.class);
           }
 
-          // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Profile.DailyBonus.newBuilder()
+          // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.DailyBonus.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -8768,15 +8572,15 @@ public final class PmgoProbuf {
           com.google.protobuf.MessageOrBuilder {
 
         /**
-         * <code>required string type = 1;</code>
+         * <code>optional string type = 1;</code>
          */
         boolean hasType();
         /**
-         * <code>required string type = 1;</code>
+         * <code>optional string type = 1;</code>
          */
         java.lang.String getType();
         /**
-         * <code>required string type = 1;</code>
+         * <code>optional string type = 1;</code>
          */
         com.google.protobuf.ByteString
             getTypeBytes();
@@ -8896,13 +8700,13 @@ public final class PmgoProbuf {
         public static final int TYPE_FIELD_NUMBER = 1;
         private java.lang.Object type_;
         /**
-         * <code>required string type = 1;</code>
+         * <code>optional string type = 1;</code>
          */
         public boolean hasType() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required string type = 1;</code>
+         * <code>optional string type = 1;</code>
          */
         public java.lang.String getType() {
           java.lang.Object ref = type_;
@@ -8919,7 +8723,7 @@ public final class PmgoProbuf {
           }
         }
         /**
-         * <code>required string type = 1;</code>
+         * <code>optional string type = 1;</code>
          */
         public com.google.protobuf.ByteString
             getTypeBytes() {
@@ -8960,10 +8764,6 @@ public final class PmgoProbuf {
           if (isInitialized == 1) return true;
           if (isInitialized == 0) return false;
 
-          if (!hasType()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
           memoizedIsInitialized = 1;
           return true;
         }
@@ -9091,7 +8891,7 @@ public final class PmgoProbuf {
                     org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.Currency.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.Currency.Builder.class);
           }
 
-          // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Profile.Currency.newBuilder()
+          // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.Currency.newBuilder()
           private Builder() {
             maybeForceBuilderInitialization();
           }
@@ -9180,10 +8980,6 @@ public final class PmgoProbuf {
           }
 
           public final boolean isInitialized() {
-            if (!hasType()) {
-              
-              return false;
-            }
             return true;
           }
 
@@ -9208,13 +9004,13 @@ public final class PmgoProbuf {
 
           private java.lang.Object type_ = "";
           /**
-           * <code>required string type = 1;</code>
+           * <code>optional string type = 1;</code>
            */
           public boolean hasType() {
             return ((bitField0_ & 0x00000001) == 0x00000001);
           }
           /**
-           * <code>required string type = 1;</code>
+           * <code>optional string type = 1;</code>
            */
           public java.lang.String getType() {
             java.lang.Object ref = type_;
@@ -9231,7 +9027,7 @@ public final class PmgoProbuf {
             }
           }
           /**
-           * <code>required string type = 1;</code>
+           * <code>optional string type = 1;</code>
            */
           public com.google.protobuf.ByteString
               getTypeBytes() {
@@ -9247,7 +9043,7 @@ public final class PmgoProbuf {
             }
           }
           /**
-           * <code>required string type = 1;</code>
+           * <code>optional string type = 1;</code>
            */
           public Builder setType(
               java.lang.String value) {
@@ -9260,7 +9056,7 @@ public final class PmgoProbuf {
             return this;
           }
           /**
-           * <code>required string type = 1;</code>
+           * <code>optional string type = 1;</code>
            */
           public Builder clearType() {
             bitField0_ = (bitField0_ & ~0x00000001);
@@ -9269,7 +9065,7 @@ public final class PmgoProbuf {
             return this;
           }
           /**
-           * <code>required string type = 1;</code>
+           * <code>optional string type = 1;</code>
            */
           public Builder setTypeBytes(
               com.google.protobuf.ByteString value) {
@@ -9329,13 +9125,13 @@ public final class PmgoProbuf {
       public static final int CREATION_TIME_FIELD_NUMBER = 1;
       private long creationTime_;
       /**
-       * <code>required int64 creation_time = 1;</code>
+       * <code>optional int64 creation_time = 1;</code>
        */
       public boolean hasCreationTime() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int64 creation_time = 1;</code>
+       * <code>optional int64 creation_time = 1;</code>
        */
       public long getCreationTime() {
         return creationTime_;
@@ -9569,16 +9365,6 @@ public final class PmgoProbuf {
         if (isInitialized == 1) return true;
         if (isInitialized == 0) return false;
 
-        if (!hasCreationTime()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-        for (int i = 0; i < getCurrencyCount(); i++) {
-          if (!getCurrency(i).isInitialized()) {
-            memoizedIsInitialized = 0;
-            return false;
-          }
-        }
         memoizedIsInitialized = 1;
         return true;
       }
@@ -9769,7 +9555,7 @@ public final class PmgoProbuf {
                   org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.Builder.class);
         }
 
-        // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.Profile.newBuilder()
+        // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Profile.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -9990,16 +9776,6 @@ public final class PmgoProbuf {
         }
 
         public final boolean isInitialized() {
-          if (!hasCreationTime()) {
-            
-            return false;
-          }
-          for (int i = 0; i < getCurrencyCount(); i++) {
-            if (!getCurrency(i).isInitialized()) {
-              
-              return false;
-            }
-          }
           return true;
         }
 
@@ -10024,19 +9800,19 @@ public final class PmgoProbuf {
 
         private long creationTime_ ;
         /**
-         * <code>required int64 creation_time = 1;</code>
+         * <code>optional int64 creation_time = 1;</code>
          */
         public boolean hasCreationTime() {
           return ((bitField0_ & 0x00000001) == 0x00000001);
         }
         /**
-         * <code>required int64 creation_time = 1;</code>
+         * <code>optional int64 creation_time = 1;</code>
          */
         public long getCreationTime() {
           return creationTime_;
         }
         /**
-         * <code>required int64 creation_time = 1;</code>
+         * <code>optional int64 creation_time = 1;</code>
          */
         public Builder setCreationTime(long value) {
           bitField0_ |= 0x00000001;
@@ -10045,7 +9821,7 @@ public final class PmgoProbuf {
           return this;
         }
         /**
-         * <code>required int64 creation_time = 1;</code>
+         * <code>optional int64 creation_time = 1;</code>
          */
         public Builder clearCreationTime() {
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -10818,13 +10594,13 @@ public final class PmgoProbuf {
     public static final int UNKNOWN1_FIELD_NUMBER = 1;
     private int unknown1_;
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     public boolean hasUnknown1() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required int32 unknown1 = 1;</code>
+     * <code>optional int32 unknown1 = 1;</code>
      */
     public int getUnknown1() {
       return unknown1_;
@@ -10978,22 +10754,6 @@ public final class PmgoProbuf {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasUnknown1()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (hasUnknown6()) {
-        if (!getUnknown6().isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
-      for (int i = 0; i < getPayloadCount(); i++) {
-        if (!getPayload(i).isInitialized()) {
-          memoizedIsInitialized = 0;
-          return false;
-        }
-      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -11149,7 +10909,7 @@ public final class PmgoProbuf {
                 org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.class, org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Builder.class);
       }
 
-      // Construct using org.wowtools.pmgowiki.probuf.PmgoProbuf.ResponseEnvelop.newBuilder()
+      // Construct using org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -11325,22 +11085,6 @@ public final class PmgoProbuf {
       }
 
       public final boolean isInitialized() {
-        if (!hasUnknown1()) {
-          
-          return false;
-        }
-        if (hasUnknown6()) {
-          if (!getUnknown6().isInitialized()) {
-            
-            return false;
-          }
-        }
-        for (int i = 0; i < getPayloadCount(); i++) {
-          if (!getPayload(i).isInitialized()) {
-            
-            return false;
-          }
-        }
         return true;
       }
 
@@ -11365,19 +11109,19 @@ public final class PmgoProbuf {
 
       private int unknown1_ ;
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public boolean hasUnknown1() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public int getUnknown1() {
         return unknown1_;
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public Builder setUnknown1(int value) {
         bitField0_ |= 0x00000001;
@@ -11386,7 +11130,7 @@ public final class PmgoProbuf {
         return this;
       }
       /**
-       * <code>required int32 unknown1 = 1;</code>
+       * <code>optional int32 unknown1 = 1;</code>
        */
       public Builder clearUnknown1() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -12076,35 +11820,35 @@ public final class PmgoProbuf {
   static {
     java.lang.String[] descriptorData = {
       "\n\022pokemon_java.proto\022\004pojo\"\345\004\n\016RequestEn" +
-      "velop\022\020\n\010unknown1\030\001 \002(\005\022\016\n\006rpc_id\030\003 \001(\003\022" +
+      "velop\022\020\n\010unknown1\030\001 \001(\005\022\016\n\006rpc_id\030\003 \001(\003\022" +
       "/\n\010requests\030\004 \003(\0132\035.pojo.RequestEnvelop." +
       "Requests\022/\n\010unknown6\030\006 \001(\0132\035.pojo.Reques" +
       "tEnvelop.Unknown6\022\020\n\010latitude\030\007 \001(\006\022\021\n\tl" +
       "ongitude\030\010 \001(\006\022\020\n\010altitude\030\t \001(\006\022+\n\004auth" +
       "\030\n \001(\0132\035.pojo.RequestEnvelop.AuthInfo\022\021\n" +
-      "\tunknown12\030\014 \001(\003\032H\n\010Requests\022\014\n\004type\030\001 \002" +
+      "\tunknown12\030\014 \001(\003\032H\n\010Requests\022\014\n\004type\030\001 \001" +
       "(\005\022.\n\007message\030\002 \001(\0132\035.pojo.RequestEnvelo" +
-      "p.Unknown3\032\034\n\010Unknown3\022\020\n\010unknown4\030\001 \002(\t",
-      "\032t\n\010Unknown6\022\020\n\010unknown1\030\001 \002(\005\0228\n\010unknow" +
-      "n2\030\002 \002(\0132&.pojo.RequestEnvelop.Unknown6." +
-      "Unknown2\032\034\n\010Unknown2\022\020\n\010unknown1\030\001 \002(\014\032z" +
-      "\n\010AuthInfo\022\020\n\010provider\030\001 \002(\t\0220\n\005token\030\002 " +
-      "\002(\0132!.pojo.RequestEnvelop.AuthInfo.JWT\032*" +
-      "\n\003JWT\022\020\n\010contents\030\001 \002(\t\022\021\n\tunknown13\030\002 \002" +
-      "(\005\"\237\010\n\017ResponseEnvelop\022\020\n\010unknown1\030\001 \002(\005" +
+      "p.Unknown3\032\034\n\010Unknown3\022\020\n\010unknown4\030\001 \001(\t",
+      "\032t\n\010Unknown6\022\020\n\010unknown1\030\001 \001(\005\0228\n\010unknow" +
+      "n2\030\002 \001(\0132&.pojo.RequestEnvelop.Unknown6." +
+      "Unknown2\032\034\n\010Unknown2\022\020\n\010unknown1\030\001 \001(\014\032z" +
+      "\n\010AuthInfo\022\020\n\010provider\030\001 \001(\t\0220\n\005token\030\002 " +
+      "\001(\0132!.pojo.RequestEnvelop.AuthInfo.JWT\032*" +
+      "\n\003JWT\022\020\n\010contents\030\001 \001(\t\022\021\n\tunknown13\030\002 \001" +
+      "(\005\"\237\010\n\017ResponseEnvelop\022\020\n\010unknown1\030\001 \001(\005" +
       "\022\020\n\010unknown2\030\002 \001(\003\022\017\n\007api_url\030\003 \001(\t\0220\n\010u" +
       "nknown6\030\006 \001(\0132\036.pojo.ResponseEnvelop.Unk" +
       "nown6\0220\n\010unknown7\030\007 \001(\0132\036.pojo.ResponseE",
       "nvelop.Unknown7\022.\n\007payload\030d \003(\0132\035.pojo." +
       "ResponseEnvelop.Payload\032u\n\010Unknown6\022\020\n\010u" +
-      "nknown1\030\001 \002(\005\0229\n\010unknown2\030\002 \002(\0132\'.pojo.R" +
+      "nknown1\030\001 \001(\005\0229\n\010unknown2\030\002 \001(\0132\'.pojo.R" +
       "esponseEnvelop.Unknown6.Unknown2\032\034\n\010Unkn" +
-      "own2\022\020\n\010unknown1\030\001 \002(\014\032C\n\010Unknown7\022\021\n\tun" +
+      "own2\022\020\n\010unknown1\030\001 \001(\014\032C\n\010Unknown7\022\021\n\tun" +
       "known71\030\001 \001(\014\022\021\n\tunknown72\030\002 \001(\003\022\021\n\tunkn" +
-      "own73\030\003 \001(\014\032K\n\007Payload\022\020\n\010unknown1\030\001 \002(\005" +
+      "own73\030\003 \001(\014\032K\n\007Payload\022\020\n\010unknown1\030\001 \001(\005" +
       "\022.\n\007profile\030\002 \001(\0132\035.pojo.ResponseEnvelop" +
       ".Profile\032\271\004\n\007Profile\022\025\n\rcreation_time\030\001 " +
-      "\002(\003\022\020\n\010username\030\002 \001(\t\022\014\n\004team\030\005 \001(\005\022\020\n\010t",
+      "\001(\003\022\020\n\010username\030\002 \001(\t\022\014\n\004team\030\005 \001(\005\022\020\n\010t",
       "utorial\030\007 \001(\014\022;\n\006avatar\030\010 \001(\0132+.pojo.Res" +
       "ponseEnvelop.Profile.AvatarDetails\022\024\n\014po" +
       "ke_storage\030\t \001(\005\022\024\n\014item_storage\030\n \001(\005\022=" +
@@ -12117,8 +11861,8 @@ public final class PmgoProbuf {
       "0\030\n \001(\005\032Y\n\nDailyBonus\022\036\n\026NextCollectTime",
       "stampMs\030\001 \001(\003\022+\n#NextDefenderBonusCollec" +
       "tTimestampMs\030\002 \001(\003\032(\n\010Currency\022\014\n\004type\030\001" +
-      " \002(\t\022\016\n\006amount\030\002 \001(\005B*\n\034org.wowtools.pmg" +
-      "owiki.probufB\nPmgoProbuf"
+      " \001(\t\022\016\n\006amount\030\002 \001(\005B4\n&org.wowtools.pmg" +
+      "owiki.extractor.probufB\nPmgoProbuf"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
