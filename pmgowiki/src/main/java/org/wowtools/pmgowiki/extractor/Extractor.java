@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import javax.management.RuntimeErrorException;
+
 import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -15,6 +17,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.ByteArrayEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
@@ -22,7 +25,14 @@ import org.json.JSONObject;
 import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf;
 import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop;
 import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Builder;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Payload;
+import org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Unknown7;
 import org.wowtools.pmgowiki.util.HttpHelper;
+
+import com.google.protobuf.ByteString;
+import com.google.protobuf.GeneratedMessage;
 
 /**
  * 抓取服务器数据的工具类
@@ -36,7 +46,11 @@ public class Extractor {
 	private static final String LOGIN_OAUTH = "https://sso.pokemon.com/sso/oauth2.0/accessToken";
 	private static final String PTC_CLIENT_SECRET = "w8ScCUXJQc6kXKw8FiOhd8Fixzht18Dq3PEVkUCP5ZPxtgyWsbTvWHFLm2wNY0JR";
 	private static final String GOOGLEMAPS_KEY = "AIzaSyAZzeHhs-8JZ7i18MjFuM35dJHq70n3Hx4";
-
+	private static final Long COORDS_LATITUDE = 0L;
+	private static final Long COORDS_LONGITUDE = 0L;
+	private static final Long COORDS_ALTITUDE = 0L;
+	private static final double FLOAT_LAT = 0;
+	private static final double FLOAT_LONG = 0;
 	
 	private HttpHelper httpHelper = new HttpHelper();
 	/**
@@ -123,45 +137,111 @@ public class Extractor {
 			throw new Exception("登录失败,step3:",e);
 		}
 	}
-	/**
-	def get_profile(access_token, api, useauth, *reqq):
-	    req = pokemon_pb2.RequestEnvelop()
-	    req1 = req.requests.add()
-	    req1.type = 2
-	    if len(reqq) >= 1:
-	        req1.MergeFrom(reqq[0])
-
-	    req2 = req.requests.add()
-	    req2.type = 126
-	    if len(reqq) >= 2:
-	        req2.MergeFrom(reqq[1])
-
-	    req3 = req.requests.add()
-	    req3.type = 4
-	    if len(reqq) >= 3:
-	        req3.MergeFrom(reqq[2])
-
-	    req4 = req.requests.add()
-	    req4.type = 129
-	    if len(reqq) >= 4:
-	        req4.MergeFrom(reqq[3])
-
-	    req5 = req.requests.add()
-	    req5.type = 5
-	    if len(reqq) >= 5:
-	        req5.MergeFrom(reqq[4])
-	    return retrying_api_req(api, access_token, req, useauth=useauth)
-	 */
 	
-	public org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Builder getProfile(String accessToken,String api,String r){
-		return null;
+	public ResponseEnvelop getProfile(String accessToken,String api,Unknown7 useauth,GeneratedMessage...reqq ){
+		Builder req = PmgoProbuf.RequestEnvelop.newBuilder();
+		org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.Builder req1 = req.addRequestsBuilder();
+		req1.setType(2);
+		int len = reqq.length;
+		if(len>=1){
+			req1.mergeFrom(reqq[0]);
+			org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.Builder req2 = req.addRequestsBuilder();
+			req2.setType(126);
+			if(len>=2){
+				req2.mergeFrom(reqq[1]);
+				org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.Builder req3 = req.addRequestsBuilder();
+				req3.setType(4);
+				if(len>=3){
+					req3.mergeFrom(reqq[2]);
+					org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.Builder req4 = req.addRequestsBuilder();
+					req4.setType(129);
+					if(len>=4){
+					    req4.mergeFrom(reqq[3]);
+						org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.Requests.Builder req5 = req.addRequestsBuilder();
+						req5.setType(5);
+						if(len>=5){
+							req5.mergeFrom(reqq[4]);
+						}
+					}
+				}
+			}
+		}
+		return retryingApiReq(api, accessToken, new Builder[]{req}, true);
 	} 
+	
+	public ResponseEnvelop retryingApiReq(String apiEndpoint,String accessToken, Builder[]args , boolean kwargs){
+	        
+	    while(true){
+	    	try {
+	    		ResponseEnvelop response = apiReq(apiEndpoint, accessToken, args, kwargs);
+				if(null!=response){
+					return response;
+				}
+			} catch (Exception e) {
+				log("retrying_api_req: request error:"+e.getMessage());
+				e.printStackTrace();
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e1) {
+				}
+			}
+	    }
+	}
+	
+	public ResponseEnvelop apiReq(String apiEndpoint,String accessToken, Builder[]args, boolean kwargs){
+		Builder pReq = PmgoProbuf.RequestEnvelop.newBuilder();
+		pReq.setRpcId(1469378659230941192L);
+		pReq.setUnknown1(2);
+		pReq.setLatitude(COORDS_LATITUDE);
+		pReq.setLongitude(COORDS_LONGITUDE);
+		pReq.setAltitude(COORDS_ALTITUDE);
+		pReq.setUnknown12(989);
+		//TODO if 'useauth' not in kwargs or not kwargs['useauth']:
+		org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.RequestEnvelop.AuthInfo.Builder authBuilder = pReq.getAuthBuilder();
+		authBuilder.setProvider("ptc");
+		authBuilder.getTokenBuilder().setContents(accessToken);
+		authBuilder.getTokenBuilder().setUnknown13(14);
+		for(Builder bd:args){
+			if(!bd.hasUnknown1()){
+				bd.setUnknown1(2);
+			}
+			pReq.mergeFrom(bd.build());
+		}
+		
+		//TODO SerializeToString  verify=False
+
+		HttpPost httpPost = new HttpPost(apiEndpoint);
+		try {
+			HttpEntity entity = new ByteArrayEntity(pReq.build().toByteArray());
+			httpPost.setEntity(entity);
+			CloseableHttpResponse r = httpHelper.getClient().execute(httpPost);//TODO verify=False
+			InputStream c = r.getEntity().getContent();
+			LinkedList<Integer> cList= new LinkedList<Integer>();
+			int i = c.read();
+			while(i>=0){
+				cList.add(i);
+				i = c.read();
+			}
+			byte[] bs = new byte[cList.size()];
+			i = 0;
+			for(int ii:cList){
+				bs[i] = (byte) ii;
+				i++;
+			}
+			ResponseEnvelop pRet = ResponseEnvelop.parseFrom(bs);
+			return pRet;
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	    
 	
 	public String getApiEndpoint(String accessToken,String api){
 		if(null==api || api.length()==0){
 			api = API_URL;
 		}
-		org.wowtools.pmgowiki.extractor.probuf.PmgoProbuf.ResponseEnvelop.Builder 	profileResponse = null;
+		ResponseEnvelop profileResponse = null;
 		while(profileResponse==null || profileResponse.hasApiUrl()){
 			 log("get_api_endpoint: calling get_profile");
 			 profileResponse = getProfile(accessToken,api,null);
@@ -173,10 +253,23 @@ public class Extractor {
 	public static void main(String[] args) throws Exception {
 		Extractor extractor = new Extractor();
 		String accessToken = extractor.loginWithPTC("test1234820142", "test1234820142");
-		System.out.println("login success "+accessToken);
+		log("accessToken "+accessToken);
+		String apiEndpoint = extractor.getApiEndpoint(accessToken, null);
+		log("apiEndpoint:"+apiEndpoint);
+		
+		ResponseEnvelop profileResponse = extractor.getProfile(accessToken, apiEndpoint, null, null);
+		log("profileResponse :"+profileResponse);
+		if(null==profileResponse){
+			log("[-] Ooops...");
+			throw new RuntimeException("profileResponse is null");
+		}
+		log("[+] Login successful");
+		Payload payload = profileResponse.getPayload(0);
+		String uname = payload.getProfile().getUsername();
+		log("username:"+uname);
 	}
 	
-	private void log(String log){
+	private static void log(Object log){
 		System.out.println(log);
 	}
 }
